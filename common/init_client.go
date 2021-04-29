@@ -33,7 +33,7 @@ func GetRestConf() (restConf *rest.Config, err error) {
 	)
 
 	// 读kubeconfig文件
-	if kubeconfig, err = ioutil.ReadFile("~/.kube/config"); err != nil {
+	if kubeconfig, err = ioutil.ReadFile("/Users/legend/go/src/k8s-client-go-master/admin.conf"); err != nil {
 		goto END
 	}
 	// 生成rest client配置
